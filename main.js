@@ -6,7 +6,14 @@ const template = require('./menu.js');
 let win
 
 function createWindow () {
-  win = new BrowserWindow({width: 300, height: 150, resizable: false})
+  win = new BrowserWindow({
+    width: 300,
+    height: 150,
+    resizable: false,
+    backgroundColor: '#0881A3',
+    fullscreen: false,
+    show: false
+  })
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'src/index.html'),
     protocol: 'file:',
@@ -15,6 +22,10 @@ function createWindow () {
 
   win.on('closed', () => {
     win = null
+  })
+
+  win.once('ready-to-show', () => {
+    win.show()
   })
 
   const menu = Menu.buildFromTemplate(template)
