@@ -6,14 +6,12 @@ const template = require('./menu.js');
 let win
 
 function createWindow () {
-  win = new BrowserWindow({width: 800, height: 550, resizable: false})
+  win = new BrowserWindow({width: 300, height: 150, resizable: false})
   win.loadURL(url.format({
     pathname: path.join(__dirname, 'src/index.html'),
     protocol: 'file:',
     slashes: true
   }))
-
-  win.webContents.openDevTools()
 
   win.on('closed', () => {
     win = null
