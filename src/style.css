@@ -1,0 +1,26 @@
+body {
+  background: #0881A3;
+  color: #FFFDFB;
+  text-align: center;
+}
+
+.btn {
+  margin-top: 35px;
+	border-radius: 6px;
+	display: inline-block;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 20px;
+	padding: 8px 15px;
+	text-decoration: none;
+}
+
+.start {
+	background-color: #F9F9F9;
+	color: #666666;
+}
+
+.stop {
+	background-color: #D02E77;
+	color: #F9F9F9;
+}
